@@ -40,4 +40,20 @@ public class Kibbutz {
         }
         return count;
     }
+
+    public Vehicles[] vehicles_15_and_wheel()
+    {
+        Vehicles[] vehicles_15_and_wheel = new Vehicles[n_vehicles];
+        int count_v_15_and_wheel = 0;
+
+        for(Vehicles v : this.kibbutz_vehicles)
+        {
+            if(v.getSteering().equals("wheel") && v.getAge_vehicles() > 15)
+            {
+                vehicles_15_and_wheel[count_v_15_and_wheel] = v;
+                count_v_15_and_wheel++;
+            }
+        }
+        return vehicles_15_and_wheel;
+    }
 }
